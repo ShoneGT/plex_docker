@@ -19,8 +19,8 @@ services:
       - TZ=Europe/Belgrade
       - PLEX_CLAIM=(insert claim token here)
     volumes:
-      - /opt/movtex/config:/config
-      - /opt/movtex//transcodes/to:/transcode
+      - /opt/movtex/movtex_I/config:/config
+      - /opt/movtex/movtex_I/transcodes/to:/transcode
       - /opt/movtex/data/:/data
     networks: 
         - plex_network
@@ -45,7 +45,7 @@ services:
         - PLEX_CLAIM=(insert claim token here)
     volumes:
         - /opt/movtex/movtex_II:/config
-        - /opt/movtex//transcodes/to:/transcode
+        - /opt/movtex/movtex_II/transcodes/to:/transcode
         - /opt/movtex/data/:/data
     networks: 
         - plex_network
@@ -69,7 +69,7 @@ services:
         - PLEX_CLAIM=(insert claim token here)
     volumes:
         - /opt/movtex/movtex_III:/config
-        - /opt/movtex//transcodes/to:/transcode
+        - /opt/movtex/movtex_III/transcodes/to:/transcode
         - /opt/movtex/data/:/data
     networks: 
         - plex_network
@@ -94,7 +94,7 @@ services:
         - PLEX_CLAIM=(insert claim token here)
     volumes:
         - /opt/movtex/movtex_IV:/config
-        - /opt/movtex//transcodes/to:/transcode
+        - /opt/movtex/movtex_IV/transcodes/to:/transcode
         - /opt/movtex/data/:/data
     networks: 
         - plex_network
