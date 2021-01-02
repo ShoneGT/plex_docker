@@ -1,9 +1,9 @@
 version: "3.7"
 
 services:
-  Movtex_I:
+  media1:
     image: plexinc/pms-docker
-    container_name: Movtex_I
+    container_name: media1
     restart: unless-stopped
     ports: 
       - 32401:32400/tcp
@@ -19,16 +19,16 @@ services:
       - TZ=Europe/Belgrade
       - PLEX_CLAIM=(insert claim token here)
     volumes:
-      - /opt/movtex/movtex_I/config:/config
-      - /opt/movtex/movtex_I/transcodes/to:/transcode
+      - /opt/movtex/media1/config:/config
+      - /opt/movtex/media1/transcodes/to:/transcode
       - /opt/movtex/data/:/data
     networks: 
         - plex_network
     
     
-  Movtex_II:
+  media2:
     image: plexinc/pms-docker
-    container_name: Movtex_II
+    container_name: media2
     restart: unless-stopped
     ports: 
         - 32402:32400/tcp
@@ -44,15 +44,15 @@ services:
         - TZ=Europe/Belgrade
         - PLEX_CLAIM=(insert claim token here)
     volumes:
-        - /opt/movtex/movtex_II:/config
-        - /opt/movtex/movtex_II/transcodes/to:/transcode
+        - /opt/movtex/media2:/config
+        - /opt/movtex/media2/transcodes/to:/transcode
         - /opt/movtex/data/:/data
     networks: 
         - plex_network
 
-  Movtex_III:
+  media3:
     image: plexinc/pms-docker
-    container_name: Movtex_III
+    container_name: media3
     restart: unless-stopped
     ports: 
         - 32403:32400/tcp
@@ -68,16 +68,16 @@ services:
         - TZ=Europe/Belgrade
         - PLEX_CLAIM=(insert claim token here)
     volumes:
-        - /opt/movtex/movtex_III:/config
-        - /opt/movtex/movtex_III/transcodes/to:/transcode
+        - /opt/movtex/media3:/config
+        - /opt/movtex/media3/transcodes/to:/transcode
         - /opt/movtex/data/:/data
     networks: 
         - plex_network
 
 
-  Movtex_IV:
+  media4:
     image: plexinc/pms-docker
-    container_name: Movtex_IV
+    container_name: media4
     restart: unless-stopped
     ports: 
         - 32404:32400/tcp
@@ -93,8 +93,8 @@ services:
         - TZ=Europe/Belgrade
         - PLEX_CLAIM=(insert claim token here)
     volumes:
-        - /opt/movtex/movtex_IV:/config
-        - /opt/movtex/movtex_IV/transcodes/to:/transcode
+        - /opt/movtex/media4:/config
+        - /opt/movtex/media4/transcodes/to:/transcode
         - /opt/movtex/data/:/data
     networks: 
         - plex_network
