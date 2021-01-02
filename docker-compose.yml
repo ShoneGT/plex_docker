@@ -1,0 +1,104 @@
+version: "3.7"
+
+services:
+  Movtex_I:
+    image: plexinc/pms-docker
+    container_name: Movtex_I
+    restart: unless-stopped
+    ports: 
+      - 32401:32400/tcp
+      # - 3005:3005/tcp
+      # - 8324:8324/tcp
+      # - 32469:32469/tcp
+      # - 1900:1900/udp
+      # - 32410:32410/udp
+      # - 32412:32412/udp
+      # - 32413:32413/udp
+      # - 32414:32414/udp
+    environment:
+      - TZ=Europe/Belgrade
+      - PLEX_CLAIM=(insert claim token here)
+    volumes:
+      - /opt/movtex/config:/config
+      - /opt/movtex//transcodes/to:/transcode
+      - /opt/movtex/data/:/data
+    networks: 
+        - plex_network
+    
+    
+  Movtex_II:
+    image: plexinc/pms-docker
+    container_name: Movtex_II
+    restart: unless-stopped
+    ports: 
+        - 32402:32400/tcp
+        # - 3005:3005/tcp
+        # - 8324:8324/tcp
+        # - 32469:32469/tcp
+        # - 1900:1900/udp
+        # - 32410:32410/udp
+        # - 32412:32412/udp
+        # - 32413:32413/udp
+        # - 32414:32414/udp
+    environment:
+        - TZ=Europe/Belgrade
+        - PLEX_CLAIM=(insert claim token here)
+    volumes:
+        - /opt/movtex/movtex_II:/config
+        - /opt/movtex//transcodes/to:/transcode
+        - /opt/movtex/data/:/data
+    networks: 
+        - plex_network
+
+  Movtex_III:
+    image: plexinc/pms-docker
+    container_name: Movtex_III
+    restart: unless-stopped
+    ports: 
+        - 32403:32400/tcp
+        # - 3005:3005/tcp
+        # - 8324:8324/tcp
+        # - 32469:32469/tcp
+        # - 1900:1900/udp
+        # - 32410:32410/udp
+        # - 32412:32412/udp
+        # - 32413:32413/udp
+        # - 32414:32414/udp
+    environment:
+        - TZ=Europe/Belgrade
+        - PLEX_CLAIM=(insert claim token here)
+    volumes:
+        - /opt/movtex/movtex_III:/config
+        - /opt/movtex//transcodes/to:/transcode
+        - /opt/movtex/data/:/data
+    networks: 
+        - plex_network
+
+
+  Movtex_IV:
+    image: plexinc/pms-docker
+    container_name: Movtex_IV
+    restart: unless-stopped
+    ports: 
+        - 32404:32400/tcp
+        # - 3005:3005/tcp
+        # - 8324:8324/tcp
+        # - 32469:32469/tcp
+        # - 1900:1900/udp
+        # - 32410:32410/udp
+        # - 32412:32412/udp
+        # - 32413:32413/udp
+        # - 32414:32414/udp
+    environment:
+        - TZ=Europe/Belgrade
+        - PLEX_CLAIM=(insert claim token here)
+    volumes:
+        - /opt/movtex/movtex_IV:/config
+        - /opt/movtex//transcodes/to:/transcode
+        - /opt/movtex/data/:/data
+    networks: 
+        - plex_network
+    
+networks:
+    plex_network:
+        driver: bridge
