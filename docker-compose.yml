@@ -21,7 +21,9 @@ services:
     volumes:
       - /opt/media_stream/media1/config:/config
       - /opt/media_stream/media1/transcodes/to:/transcode
-      - /opt/media_stream/data/:/data
+      - /mnt/disk1/:/disk1
+      - /mnt/disk2/:/disk2
+      - /mnt/disk3/:/disk3
     networks: 
         - plex_network
     
@@ -46,7 +48,9 @@ services:
     volumes:
         - /opt/media_stream/media2:/config
         - /opt/media_stream/media2/transcodes/to:/transcode
-        - /opt/media_stream/data/:/data
+        - /mnt/disk1/:/disk1
+        - /mnt/disk2/:/disk2
+        - /mnt/disk3/:/disk3
     networks: 
         - plex_network
 
@@ -70,7 +74,9 @@ services:
     volumes:
         - /opt/media_stream/media3:/config
         - /opt/media_stream/media3/transcodes/to:/transcode
-        - /opt/media_stream/data/:/data
+        - /mnt/disk1/:/disk1
+        - /mnt/disk2/:/disk2
+        - /mnt/disk3/:/disk3
     networks: 
         - plex_network
 
@@ -95,7 +101,9 @@ services:
     volumes:
         - /opt/media_stream/media4:/config
         - /opt/media_stream/media4/transcodes/to:/transcode
-        - /opt/media_stream/data/:/data
+        - /mnt/disk1/:/disk1
+        - /mnt/disk2/:/disk2
+        - /mnt/disk3/:/disk3
     networks: 
         - plex_network
     
