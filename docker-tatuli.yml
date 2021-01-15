@@ -1,0 +1,14 @@
+version: '3'
+services:
+  tautulli1:
+    image: tautulli/tautulli
+    container_name: tautulli1
+    restart: unless-stopped
+    volumes:
+      - /opt/media_stream/media1/tatuli/:/config
+    environment:
+      - PUID=<uid>
+      - PGID=<gid>
+      - TZ=<timezone>
+    ports:
+      - 8181:8181
