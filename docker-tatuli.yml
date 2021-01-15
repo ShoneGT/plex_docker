@@ -39,7 +39,7 @@ services:
     ports:
       - 8183:8181
 
-  tautulli2:
+  tautulli4:
     image: tautulli/tautulli
     container_name: tautulli4
     restart: unless-stopped
