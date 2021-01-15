@@ -15,7 +15,7 @@ services:
 
   tautulli2:
     image: tautulli/tautulli
-    container_name: tautulli1
+    container_name: tautulli2
     restart: unless-stopped
     volumes:
       - /opt/media_stream/media2/tatuli/:/config
@@ -28,7 +28,7 @@ services:
   
   tautulli3:
     image: tautulli/tautulli
-    container_name: tautulli1
+    container_name: tautulli3
     restart: unless-stopped
     volumes:
       - /opt/media_stream/media3/tatuli/:/config
@@ -41,7 +41,7 @@ services:
 
   tautulli2:
     image: tautulli/tautulli
-    container_name: tautulli1
+    container_name: tautulli4
     restart: unless-stopped
     volumes:
       - /opt/media_stream/media4/tatuli/:/config
