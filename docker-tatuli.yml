@@ -5,7 +5,7 @@ services:
     container_name: tautulli1
     restart: unless-stopped
     volumes:
-      - /opt/media_stream/media1/tatuli/:/config
+      - /opt/media_stream/media1/tautulli/:/config
     environment:
       - PUID=<uid>
       - PGID=<gid>
@@ -18,7 +18,7 @@ services:
     container_name: tautulli2
     restart: unless-stopped
     volumes:
-      - /opt/media_stream/media2/tatuli/:/config
+      - /opt/media_stream/media2/tautulli/:/config
     environment:
       - PUID=<uid>
       - PGID=<gid>
@@ -31,7 +31,7 @@ services:
     container_name: tautulli3
     restart: unless-stopped
     volumes:
-      - /opt/media_stream/media3/tatuli/:/config
+      - /opt/media_stream/media3/tautulli/:/config
     environment:
       - PUID=<uid>
       - PGID=<gid>
@@ -44,7 +44,7 @@ services:
     container_name: tautulli4
     restart: unless-stopped
     volumes:
-      - /opt/media_stream/media4/tatuli/:/config
+      - /opt/media_stream/media4/tautulli/:/config
     environment:
       - PUID=<uid>
       - PGID=<gid>
