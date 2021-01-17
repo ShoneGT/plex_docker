@@ -46,7 +46,7 @@ services:
         - TZ=Europe/Belgrade
         - PLEX_CLAIM=(insert claim token here)
     volumes:
-        - /opt/media_stream/media2:/config
+        - /opt/media_stream/media2/config:/config
         - /opt/media_stream/media2/transcodes/to:/transcode
         - /mnt/disk1/:/disk1
         - /mnt/disk2/:/disk2
@@ -72,7 +72,7 @@ services:
         - TZ=Europe/Belgrade
         - PLEX_CLAIM=(insert claim token here)
     volumes:
-        - /opt/media_stream/media3:/config
+        - /opt/media_stream/media3/config:/config
         - /opt/media_stream/media3/transcodes/to:/transcode
         - /mnt/disk1/:/disk1
         - /mnt/disk2/:/disk2
@@ -99,7 +99,7 @@ services:
         - TZ=Europe/Belgrade
         - PLEX_CLAIM=(insert claim token here)
     volumes:
-        - /opt/media_stream/media4:/config
+        - /opt/media_stream/media4/config:/config
         - /opt/media_stream/media4/transcodes/to:/transcode
         - /mnt/disk1/:/disk1
         - /mnt/disk2/:/disk2
