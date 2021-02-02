@@ -17,7 +17,7 @@ services:
       # - 32414:32414/udp
     environment:
       - TZ=Europe/Belgrade
-      - PLEX_CLAIM=(insert claim token here)
+      - PLEX_CLAIM=Ks7uRyJBx9gELXipbTbH
     volumes:
       - /opt/media_stream/media1/config:/config
       - /opt/media_stream/media1/transcodes/to:/transcode
@@ -44,7 +44,7 @@ services:
         # - 32414:32414/udp
     environment:
         - TZ=Europe/Belgrade
-        - PLEX_CLAIM=(insert claim token here)
+        - PLEX_CLAIM=nh6p9sLhDdH1gVVywnMq
     volumes:
         - /opt/media_stream/media2/config:/config
         - /opt/media_stream/media2/transcodes/to:/transcode
@@ -70,7 +70,7 @@ services:
         # - 32414:32414/udp
     environment:
         - TZ=Europe/Belgrade
-        - PLEX_CLAIM=(insert claim token here)
+        - PLEX_CLAIM=hFXWnKXDkegpsU6ybfRL
     volumes:
         - /opt/media_stream/media3/config:/config
         - /opt/media_stream/media3/transcodes/to:/transcode
@@ -97,7 +97,7 @@ services:
         # - 32414:32414/udp
     environment:
         - TZ=Europe/Belgrade
-        - PLEX_CLAIM=(insert claim token here)
+        - PLEX_CLAIM=-GEpntp4vV34r_oWuUuH
     volumes:
         - /opt/media_stream/media4/config:/config
         - /opt/media_stream/media4/transcodes/to:/transcode
